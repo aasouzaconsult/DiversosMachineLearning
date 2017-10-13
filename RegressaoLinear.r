@@ -48,7 +48,7 @@ summary(multi.fit)
 # Coeficientes (Coefficients): Para cada variável e a intercepção, um peso é produzido e que o peso tem outros atributos como o erro padrão, 
 #um valor t-teste e a significância.
 # - Estimate : Este é o peso dado à variável. No caso de regressão simples (uma variável mais a interceptação), para cada aumento de um dólar 
-#em gastar, o modelo prevê um aumento de US $10,6222.
+#em Gastar(Spend), o modelo prevê um aumento de US $10,6222.
 # - Std. Error : Diz-lhe como precisamente foi medida a estimativa. É realmente útil apenas para o cálculo do t-values (valor t).
 # - t-value e Pr(> [t]) : O t-value é calculado tomando o coeficiente (Estimate) dividido pelo Std. Error. 
 # Em seguida, é utilizado para testar se ou não o coeficiente é significativamente diferente de zero. Se não for significativa, então 
