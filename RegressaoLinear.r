@@ -292,3 +292,6 @@ dwtest(multi.fit) #Test for independence of residuals
 # http://www.learnbymarketing.com/tutorials/linear-regression-in-r/
 # http://www.learnbymarketing.com/tutorials/explaining-the-lm-summary-in-r/
 # https://www.youtube.com/watch?v=TLlzToeIpGc (Vídeo explicativo - Valor, Tamanho e Idade Prédio)
+# Regressão Linear - Explicações 
+#   I - https://www.youtube.com/watch?v=uoZqwLDlJb0
+## II - https://www.youtube.com/watch?v=7w7LODmYzy4
