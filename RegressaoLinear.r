@@ -1,3 +1,7 @@
+#########################################
+# Regressão Linear (Simples e Múltipla) #
+#########################################
+
 # Importando os dados
 # http://www.learnbymarketing.com/wp-content/uploads/2014/12/data-marketing-budget-12mo.csv
 dataset = read.csv("C:/Alex/Mestrado/data-marketing-budget-12mo.csv", header=T, colClasses = c("numeric", "numeric", "numeric"))
@@ -287,3 +291,4 @@ dwtest(multi.fit) #Test for independence of residuals
 # Links - Auxiliares
 # http://www.learnbymarketing.com/tutorials/linear-regression-in-r/
 # http://www.learnbymarketing.com/tutorials/explaining-the-lm-summary-in-r/
+# https://www.youtube.com/watch?v=TLlzToeIpGc (Vídeo explicativo - Valor, Tamanho e Idade Prédio)
