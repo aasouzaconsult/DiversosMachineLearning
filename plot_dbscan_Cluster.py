@@ -3,10 +3,10 @@
 ===================================
 Demo of DBSCAN clustering algorithm
 ===================================
-
 Finds core samples of high density and expands clusters from them.
-
 """
+#http://scikit-learn.org/stable/auto_examples/cluster/plot_dbscan.html#sphx-glr-auto-examples-cluster-plot-dbscan-py
+
 print(__doc__)
 
 import numpy as np
