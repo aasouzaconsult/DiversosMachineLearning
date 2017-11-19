@@ -295,3 +295,4 @@ dwtest(multi.fit) #Test for independence of residuals
 # Regressão Linear - Explicações 
 #   I - https://www.youtube.com/watch?v=uoZqwLDlJb0
 ## II - https://www.youtube.com/watch?v=7w7LODmYzy4
+#####################
