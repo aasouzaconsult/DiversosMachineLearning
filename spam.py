@@ -76,7 +76,7 @@ model2.fit(train_matrix,train_labels)
 # Test the unseen mails for Spam
 
 #test_dir = 'lingspam_public\\lemm_stop\\test-mails'
-train_dir = 'bases\\ling-spam\\test-mails'
+test_dir = 'bases\\ling-spam\\test-mails'
 
 test_matrix = extract_features(test_dir)
 test_labels = np.zeros(260)
