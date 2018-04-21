@@ -14,27 +14,16 @@ def get_optimal_value(capacidade, peso, valores):
     print "---------------------------------------------------------------------------------"
 
     while capacidade > 0 and numItems > 0:
-        maxi = 0
-        idx = None
-        for i in range(numItems):
-            # Verifica se o proximo valor é maior que zero e menor que o maximo
-            if valorProbMochGuloso[i][1] > 0 and maxi < valorProbMochGuloso[i][0]:
-                maxi = valorProbMochGuloso[i][0] # maxi recebe o valor maximo
-                idx = i # idx - armazena o item atual
-      
-        if idx is None:
-            return 0.
-
+        idx = 0 # Vaariavel auxiliar (o indice do vetor vai sempre ser o 0)
         # Verifica se o proximo item cabe na mochila (capacidade) 
         if valorProbMochGuloso[idx][1] <= capacidade:
             value += valorProbMochGuloso[idx][0] # Acumulado do valor
             capacidadeTotal += valorProbMochGuloso[idx][1] # Acumulado dos pesos (capacidade alocada)
             capacidade -= valorProbMochGuloso[idx][1] # Decrementa os pesos (capacidade livre da mochila)
+        
         # Sem a opção abaixo, ele procura em todos os itens um item que caiba na mochila
         else:
-            if valorProbMochGuloso[idx][1] > 0:
-                value += (capacidade / valorProbMochGuloso[idx][1]) * valorProbMochGuloso[idx][1] * valorProbMochGuloso[idx][0]
-                return value
+            return value
 
         print "Num itens alocados na Mochila: {:}".format((Items - numItems)+1)
         print "Valor alocado do item: {:}".format(valorProbMochGuloso[idx][0])
@@ -147,6 +136,3 @@ t0 = time()
 capacidade = 5000
 opt_value = get_optimal_value(capacidade, peso, valores)
 print("Executado em %0.3fs." % (time() - t0))
-
-# Fonte
-# https://codereview.stackexchange.com/questions/150677/knapsack-greedy-algorithm-in-python/150891
