@@ -23,10 +23,6 @@ def get_optimal_value(capacidade, peso, valores):
             value += valorProbMochGuloso[idx][0] # Acumulado do valor
             capacidadeTotal += valorProbMochGuloso[idx][1] # Acumulado dos pesos (capacidade alocada)
             capacidade -= valorProbMochGuloso[idx][1] # Decrementa os pesos (capacidade livre da mochila)
-        
-        # Sem a opção abaixo, ele procura em todos os itens um item que caiba na mochila
-        else:
-            return value
 
         print "Num itens alocados na Mochila: {:}".format((Items - numItems)+1)
         print "Valor alocado do item: {:}".format(valorProbMochGuloso[idx][0])
