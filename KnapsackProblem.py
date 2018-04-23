@@ -1,8 +1,5 @@
 from time import time
 
-MochilaValores = []
-MochilaPesos = []
-
 # Problema da Mochila - Guloso - Maior Valor
 def get_optimal_value(capacidade, peso, valores):
     capacidadeTotal = 0.
@@ -23,19 +20,21 @@ def get_optimal_value(capacidade, peso, valores):
             value += valorProbMochGuloso[idx][0] # Acumulado do valor
             capacidadeTotal += valorProbMochGuloso[idx][1] # Acumulado dos pesos (capacidade alocada)
             capacidade -= valorProbMochGuloso[idx][1] # Decrementa os pesos (capacidade livre da mochila)
+        
+            print "Item alocado na Mochila: {:}".format((Items - numItems)+1)
+            print "Valor alocado do item: {:}".format(valorProbMochGuloso[idx][0])
+            print "Valor acumulado na Mochila: {:}".format(value)
+            print "Capacidade alocada do item: {:}".format(valorProbMochGuloso[idx][1])
+            print "Capacidade acumulada na Mochila: {:}".format(capacidadeTotal)
 
-        print "Num itens alocados na Mochila: {:}".format((Items - numItems)+1)
-        print "Valor alocado do item: {:}".format(valorProbMochGuloso[idx][0])
-        print "Valor acumulado na Mochila: {:}".format(value)
-        print "Capacidade alocada do item: {:}".format(valorProbMochGuloso[idx][1])
-        print "Capacidade acumulada na Mochila: {:}".format(capacidadeTotal)
-
-        MochilaValores.append(valorProbMochGuloso[idx][0])
-        MochilaPesos.append(valorProbMochGuloso[idx][1])
+            MochilaValores.append(valorProbMochGuloso[idx][0])
+            MochilaPesos.append(valorProbMochGuloso[idx][1])
+            print "---------------------------------------------------------------------------------"
+        else:
+            numItems = numItems
 
         valorProbMochGuloso.pop(idx)
         numItems -= 1 # Decrementa o numero de itens
-        print "---------------------------------------------------------------------------------"
     return value
 
 # Instância de 5
@@ -51,6 +50,7 @@ opt_value = get_optimal_value(capacidade, peso, valores)
 print "---------------------------------------------------------------------------------"
 print "Vetor de Valores da Mochila: {:}".format(MochilaValores)
 print "Vetor de Pesos da Mochila: {:}".format(MochilaPesos)
+print "Itens Alocados: {:}".format(len(MochilaPesos))
 print "---------------------------------------------------------------------------------"
 print "Executado em %0.3fs." % (time() - t0)
 
@@ -66,6 +66,7 @@ opt_value = get_optimal_value(capacidade, peso, valores)
 print "---------------------------------------------------------------------------------"
 print "Vetor de Valores da Mochila: {:}".format(MochilaValores)
 print "Vetor de Pesos da Mochila: {:}".format(MochilaPesos)
+print "Itens Alocados: {:}".format(len(MochilaPesos))
 print "---------------------------------------------------------------------------------"
 print "Executado em %0.3fs." % (time() - t0)
 
@@ -81,6 +82,40 @@ opt_value = get_optimal_value(capacidade, peso, valores)
 print "---------------------------------------------------------------------------------"
 print "Vetor de Valores da Mochila: {:}".format(MochilaValores)
 print "Vetor de Pesos da Mochila: {:}".format(MochilaPesos)
+print "Itens Alocados: {:}".format(len(MochilaPesos))
+print "---------------------------------------------------------------------------------"
+print "Executado em %0.3fs." % (time() - t0)
+
+
+# Instância de 30
+# --------------------------
+t0 = time()
+MochilaValores = []
+MochilaPesos = []
+capacidade = 120
+valores = [100, 110, 78, 28, 10, 15, 30, 52, 80, 12, 63, 54, 86, 47, 69, 47, 90, 85, 47, 33, 100, 110, 78, 28, 10, 15, 30, 52, 80, 12]
+peso = [8, 7, 9, 8, 6, 7, 11, 14, 9, 3, 4, 12, 15, 5, 8, 9, 4, 15, 14, 1, 4, 12, 15, 5, 8, 9, 4, 15, 14, 1]
+opt_value = get_optimal_value(capacidade, peso, valores)
+print "---------------------------------------------------------------------------------"
+print "Vetor de Valores da Mochila: {:}".format(MochilaValores)
+print "Vetor de Pesos da Mochila: {:}".format(MochilaPesos)
+print "Itens Alocados: {:}".format(len(MochilaPesos))
+print "---------------------------------------------------------------------------------"
+print "Executado em %0.3fs." % (time() - t0)
+
+# Instância de 50
+# --------------------------
+t0 = time()
+MochilaValores = []
+MochilaPesos = []
+capacidade = 180
+valores = [100, 110, 78, 28, 10, 15, 30, 52, 80, 12, 63, 54, 86, 47, 69, 47, 90, 85, 47, 33, 100, 110, 78, 28, 10, 15, 30, 52, 80, 12, 63, 54, 86, 47, 69, 47, 90, 85, 47, 33, 110, 78, 28, 10, 15, 30, 52, 80, 12, 63]
+peso = [8, 7, 9, 8, 6, 7, 11, 14, 9, 3, 4, 12, 15, 5, 8, 9, 4, 15, 14, 1, 8, 7, 9, 8, 6, 7, 11, 14, 9, 3, 4, 12, 15, 5, 8, 9, 4, 15, 14, 1, 8, 7, 9, 8, 6, 7, 11, 14, 9, 3]
+opt_value = get_optimal_value(capacidade, peso, valores)
+print "---------------------------------------------------------------------------------"
+print "Vetor de Valores da Mochila: {:}".format(MochilaValores)
+print "Vetor de Pesos da Mochila: {:}".format(MochilaPesos)
+print "Itens Alocados: {:}".format(len(MochilaPesos))
 print "---------------------------------------------------------------------------------"
 print "Executado em %0.3fs." % (time() - t0)
 
@@ -96,6 +131,7 @@ opt_value = get_optimal_value(capacidade, peso, valores)
 print "---------------------------------------------------------------------------------"
 print "Vetor de Valores da Mochila: {:}".format(MochilaValores)
 print "Vetor de Pesos da Mochila: {:}".format(MochilaPesos)
+print "Itens Alocados: {:}".format(len(MochilaPesos))
 print "---------------------------------------------------------------------------------"
 print "Executado em %0.3fs." % (time() - t0)
 
@@ -118,6 +154,7 @@ opt_value = get_optimal_value(capacidade, peso, valores)
 print "---------------------------------------------------------------------------------"
 print "Vetor de Valores da Mochila: {:}".format(MochilaValores)
 print "Vetor de Pesos da Mochila: {:}".format(MochilaPesos)
+print "Itens Alocados: {:}".format(len(MochilaPesos))
 print "---------------------------------------------------------------------------------"
 print "Executado em %0.3fs." % (time() - t0)
 
@@ -140,6 +177,7 @@ opt_value = get_optimal_value(capacidade, peso, valores)
 print "---------------------------------------------------------------------------------"
 print "Vetor de Valores da Mochila: {:}".format(MochilaValores)
 print "Vetor de Pesos da Mochila: {:}".format(MochilaPesos)
+print "Itens Alocados: {:}".format(len(MochilaPesos))
 print "---------------------------------------------------------------------------------"
 print "Executado em %0.3fs." % (time() - t0)
 
@@ -162,6 +200,7 @@ opt_value = get_optimal_value(capacidade, peso, valores)
 print "---------------------------------------------------------------------------------"
 print "Vetor de Valores da Mochila: {:}".format(MochilaValores)
 print "Vetor de Pesos da Mochila: {:}".format(MochilaPesos)
+print "Itens Alocados: {:}".format(len(MochilaPesos))
 print "---------------------------------------------------------------------------------"
 print "Executado em %0.3fs." % (time() - t0)
 
@@ -184,5 +223,6 @@ opt_value = get_optimal_value(capacidade, peso, valores)
 print "---------------------------------------------------------------------------------"
 print "Vetor de Valores da Mochila: {:}".format(MochilaValores)
 print "Vetor de Pesos da Mochila: {:}".format(MochilaPesos)
+print "Itens Alocados: {:}".format(len(MochilaPesos))
 print "---------------------------------------------------------------------------------"
 print "Executado em %0.3fs." % (time() - t0)
