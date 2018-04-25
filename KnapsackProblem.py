@@ -6,10 +6,13 @@ def get_optimal_value(capacidade, peso, valores):
     value = 0.
     numItems = len(valores)
     Items = len(valores)
+  
     print "Número de Itens - {:.0f}".format(numItems)
     print "Capacidade da Mochila: - {:.0f}".format(capacidade)
 
-    valorProbMochGuloso = sorted([[valores[i], peso[i]] for i in range(numItems)], reverse=True)
+   # Ordenado por Maior Valor e Menor Peso
+   #valorProbMochGuloso = sorted([[valores[i], peso[i]] for i in range(numItems)], reverse=True)
+    valorProbMochGuloso = sorted([[valores[i], peso[i]] for i in range(numItems)], key=lambda x: (x[0], -x[1]), reverse=True)
     print "Valor - Ordem Decrescente: - {:}".format(valorProbMochGuloso)
     print "---------------------------------------------------------------------------------"
 
