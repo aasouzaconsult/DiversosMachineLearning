@@ -10,4 +10,5 @@ clf.predict_proba(X[:2, :])
 
 clf.score(X, y)
 
+# mais exemplos: https://scikit-learn.org/stable/auto_examples/linear_model/plot_iris_logistic.html#sphx-glr-auto-examples-linear-model-plot-iris-logistic-py
 # mais informações em: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
