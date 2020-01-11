@@ -4,7 +4,7 @@
 
 # Importando os dados
 # http://www.learnbymarketing.com/wp-content/uploads/2014/12/data-marketing-budget-12mo.csv
-dataset = read.csv("C:/Alex/Mestrado/data-marketing-budget-12mo.csv", header=T, colClasses = c("numeric", "numeric", "numeric"))
+dataset = read.csv("Data/data-marketing-budget-12mo.csv", header=T, colClasses = c("numeric", "numeric", "numeric"))
 
 # Vendo uma pequena amostra
 head(dataset,5)
