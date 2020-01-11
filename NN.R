@@ -9,7 +9,7 @@
 ## Creating index variable ##
 #############################
 # Read the Data
-data = read.csv("C:/temp/cereals.csv", header=T)
+data = read.csv("Data/cereals.csv", header=T)
 
 # Random sampling
 samplesize = 0.60 * nrow(data)
@@ -45,8 +45,8 @@ testNN = scaled[-index , ] # Conjunto de Teste
 set.seed(2)
 NN = neuralnet(rating ~ calories + protein + fat + sodium + fiber, trainNN, hidden = 3 , linear.output = T )
 
-# Os pesos (weights) s„o calculados pelo algoritmo back propagation
-# As linhas azuis s„o os bias
+# Os pesos (weights) s√£o calculados pelo algoritmo back propagation
+# As linhas azuis s√£o os bias
 
 # plot neural network
 plot(NN)
