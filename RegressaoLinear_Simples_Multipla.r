@@ -60,7 +60,7 @@ abline(h=0)
 # Regressão Linear Múltipla - Variável Indicadora #
 ###################################################
 
-gerentes = read.table("C:\\Temp\\gerentes1.txt",header=T)
+gerentes = read.table("Data/gerentes1.txt",header=T)
 attach(gerentes)
 Sexo = factor(Sexo)
 gerentes
