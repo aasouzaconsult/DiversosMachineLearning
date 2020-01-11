@@ -2,7 +2,7 @@
 # Regressão Linear Simples #
 ############################
 
-gerentes = read.table("C:\\Temp\\gerentes.txt",header=T)
+gerentes = read.table("Data/gerentes.txt",header=T)
 attach(gerentes)
 
 summary(gerentes) # resumos
