@@ -57,4 +57,4 @@ system.time(solve(t(wts*X)%*%(wts*X))%*%(t(wts*X))%*%(wts*y))
 # MÉTODO 5
 # OLS com multiplicação de matrizes: função crossprod
 # (apenas coeficientes)
-system.time(solve( crossprod(wts*X), crossprod(wts*X, wts*y)))
+system.time(solve( crossprod(wts*X), crossprod(wts*X, wts*y))) 
