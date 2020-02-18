@@ -2,9 +2,8 @@
 # Exemplo de Rede Neural - Perceptron #
 #######################################
 # Fonte e Direitos: https://jtsulliv.github.io/perceptron/
-
 """
-Created on Tue Jul 25 13:32:18 2017
+Created on Tue Feb 17 13:32:18 2017
 @author: JSULLIVAN
 """
 
