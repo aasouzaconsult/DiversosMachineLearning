@@ -1,10 +1,9 @@
 # https://appliedmachinelearning.wordpress.com/2017/01/23/email-spam-filter-python-scikit-learn/
 # Download dataset (https://www.dropbox.com/s/yjiplngoa430rid/)
 
-# -*- coding: utf-8 -*-
 """
-Created on Fri Jan 27 22:53:50 2017
 @author: Abhijeet Singh (link: https://github.com/abhijeet3922/Mail-Spam-Filtering/blob/master/lingspam_filter.py)
+copy by Alex Souza
 """
 
 import os
